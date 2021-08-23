@@ -1,0 +1,24 @@
+package build.type1;
+
+public class HouseDirector {
+
+    HouseBuilder houseBuilder = null;
+
+    public HouseDirector(HouseBuilder houseBuilder){
+        this.houseBuilder = houseBuilder;
+    }
+
+    public void setHouseBuilder(HouseBuilder houseBuilder) {
+        this.houseBuilder = houseBuilder;
+    }
+
+
+    public House constructHouse(){
+
+        houseBuilder.buildBaise();
+        houseBuilder.buildWalls();
+        houseBuilder.roofed();
+
+        return houseBuilder.buildHouse();
+    }
+}
